@@ -1,6 +1,6 @@
 
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+import { lightbox } from './lightbox.js';
+
 import axios from 'axios';
 import { API_URL, options }  from './api.js';
 import Notiflix from 'notiflix';
@@ -8,14 +8,7 @@ import { elements } from './elements';
 
 
 const { galleryEl, searchInput, searchForm, loaderEl } = elements;
-const lightbox = new SimpleLightbox('.lightbox', {
-    captionsData: 'alt',
-    captionDelay: 250,
-    enableKeyboard: true,
-    showCounter: false,
-    scrollZoom: false,
-    close: false,
-  });
+
 let totalHits = 0;
 let isLoadingMore = false;
 let reachedEnd = false;
