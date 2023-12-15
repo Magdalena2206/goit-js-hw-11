@@ -3,4 +3,5 @@ export const elements = {
     searchInput: document.querySelector('input[name="searchQuery"'),
     searchForm: document.getElementById('search-form'),
     loaderEl: document.querySelector('.loader'),
+    btnLoadMore: document.querySelector('.load-more'),
   };

@@ -7,11 +7,14 @@ import Notiflix from 'notiflix';
 import { elements } from './elements';
 
 
-const { galleryEl, searchInput, searchForm, loaderEl } = elements;
+const { galleryEl, searchInput, searchForm, loaderEl, btnLoadMore } = elements;
 
 let totalHits = 0;
 let isLoadingMore = false;
 let reachedEnd = false;
+
+// refs.btnLoadMore.classList.add('is-hidden');
+btnLoadMore.style.display = 'none';
 
 searchForm.addEventListener('submit', onFormSubmit);
 window.addEventListener('scroll', onScrollHandler);
